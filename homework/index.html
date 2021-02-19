@@ -15,7 +15,7 @@
        <li>Программа на Python — часть 3</li>
    </ul>
 
-<h3>Содержание</h3>
+<h2>Содержание</h2>
 <h4>HOW-TO: Программа на Python, Часть 1</h4>
 <ul>
     <li>Наша первая программа</li>
@@ -30,16 +30,16 @@
      Давайте создадим простую программу прямо сейчас.
 </p>
 
-<h3>Наша первая программа</h3>
+<h2>Наша первая программа</h2>
 <p>Наберём код в текстовом редакторе (например, в gedit). Потом мы разберёмся, 
     что делает каждая строка и пойдём дальше.
 </p>
 
 <p>Введите эти 4 строки:</p>
 
-<p>#!/usr/bin/env python
-    print 'Hello. I am a python program.'
-    name = raw_input("What is your name?")
+<p style="font-family: courier;font-size:90%;">#!/usr/bin/env python<br>
+    print 'Hello. I am a python program.'<br>
+    name = raw_input("What is your name?")<br>
     print "Hello there, " + name + "!"</p>
     
 <p> Это всё. Сохраните файл как hello.py в любом месте. 
@@ -48,21 +48,21 @@
     Для запуска программы нужно сделать её файл исполняемым. Для этого введите в терминале
 </p>
    
-    <p>chmod +x hello.py</p>
+    <p style="font-family: courier;font-size:90%;">chmod +x hello.py</p>
 <p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
-<p>greg@earth:~/python_examples$ ./hello.py
-    Hello. I am a python program.
-    What is your name? Ferd Burphel
-    Hello there, Ferd Burphel!
+<p style="font-family: courier;font-size:90%;">greg@earth:~/python_examples$ ./hello.py<br>
+    Hello. I am a python program.<br>
+    What is your name? Ferd Burphel<br>
+    Hello there, Ferd Burphel!<br>
     greg@earth:~/python_examples$</p>
 <p>Вот и всё.</p>
-<h3>Пример цикла For</h3>
+<h2>Пример цикла For</h2>
 <p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый 
     редактор и наберите следующую программу:
 </p>
 
-<p>#!/usr/bin/env python
-    for cntr in range(0,10):
+<p style="font-family: courier;font-size:90%;">#!/usr/bin/env python <br>
+    for cntr in range(0,10):<br>
     print cntr</p>
 <p>Не забудьте поставить символ табуляции перед строкой «print cntr».
     Это важно. В Python для указания на блоки кода используются не круглые 

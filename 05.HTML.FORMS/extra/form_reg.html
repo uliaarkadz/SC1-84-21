@@ -9,18 +9,17 @@
     <fieldset>
         <legend>Personal Information</legend>
         <input type="text" name="lastname" id="lname" placeholder="Lastname" required autofocus maxlength="25"
-               pattern="^[A-Za-z]+$">
-        <label for="lname">text: Only cyclic, no spaces, length 25 characters, required field, autofocus</label><br>
+               pattern="^[A-Za-z+$"> <br>
         <input type="text" name="firstname" id="fname" placeholder="Firstname" maxlength="20" pattern="^[A-Za-z+$"> <br>
-        <input type="text" name="middletname" id="mname" placeholder="Middle Name" maxlength="24" pattern="^[A-Za-z]+$"><br>
+        <input type="text" name="middlename" id="mname" placeholder="Middle Name" maxlength="24" pattern="^[A-Za-z]+$"><br>
         <fieldset>
             <legend>Passport Info</legend>
-            <input type="text" required pattern="^[A-Z]{2}">
+            <input type="text" required pattern="^[A-Z]{2}" size="3" maxlength="2">
             <input type="text" required pattern="\d{7}">
         </fieldset>
         <fieldset>
             <legend>Date of Birth</legend>
-            <input type="text" id="year" placeholder="2000"> <br>
+            <input type="text" id="year" pattern="\d{4}" placeholder="2000"> <br>
             <select name="month" id="month">
                 <option value="1">January</option>
                 <option value="2">February</option>
@@ -35,7 +34,7 @@
                 <option value="11">November</option>
                 <option value="12">December</option>
             </select> <br>
-            <input type="number" min="1" max="31" multiple="3"><br>
+            <input type="number" min="1" max="31" step="1"><br>
         </fieldset>
         <select name="nationality" id="nationality" required>
             <option value="bel">RB</option>
@@ -82,8 +81,8 @@
     </fieldset>
     <fieldset>
         <legend>Registration and password restore form</legend>
-        <input type="text" required pattern="[A-Za-z]" minlength="5" maxlength="20" placeholder="LogIn"> <br>
-        <input type="text" required pattern="[A-Za-z]" minlength="10" maxlength="20" autocomplete="off"
+        <input type="text" required pattern="[A-Za-z]{5,}" maxlength="20" placeholder="LogIn"> <br>
+        <input type="text" required pattern="[A-Za-z]{10,}" maxlength="20" autocomplete="off"
                placeholder="Password">
     </fieldset>
 

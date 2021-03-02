@@ -89,7 +89,7 @@
                     <label for="name">* Имя</label> <br>
                     <input id="email" type="email">
                     <label for="name">* e-mail</label> <br>
-                    <textarea name="text" rows="3" cols="15">Форма отправки</textarea> <br>
+                    <textarea name="text" rows="3" cols="15" placeholder="Форма отправки"></textarea> <br>
                     <input type="submit" value="Отправить"><br>
                     <em>* - обязательное поле<br>
                         поле email - с проверкой
@@ -144,13 +144,13 @@
         </td>
         <td>
             Валидация данных HTML5:
-            <form name="standart_form" action="http://fe.it-academy.by/TestForm.php" method="post|get">
+            <form name="standard7_form" action="http://fe.it-academy.by/TestForm.php" method="post|get">
                 <fieldset>
                     <legend>Строка поиска</legend>
-                    <input type="text" pattern="[А-Яа-я]" placeholder="Только русские буквы"><br>
+                    <input type="text" pattern="[А-Яа-я]+" placeholder="Только русские буквы"><br>
                     <label for="phone"><em>Телефонный номер в формате <br>+ХХХ-ХХ-ХХХХХХХ, где Х - любое
                         число</em></label>
-                    <input id="phone" type="text" pattern="/^(\+?\d+)?\s*(\(\d+\))?[\s-]*([\d-]*)$/"
+                    <input id="phone" type="text" pattern="^\+\d{3}-\d{2}-\d{7}"
                            placeholder="+375-29-1234567"><br>
                     <input type="submit" value="Проверить">
                 </fieldset>

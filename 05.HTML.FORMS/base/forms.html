@@ -7,9 +7,9 @@
 <body>
 <table border="1" width="700">
     <tr>
-        <td>
+        <td width=50%>
             Простая форма поиска с вариантами:
-            <form name="standart_form" action="http://fe.it-academy.by/TestForm.php" method="post|get">
+            <form name="standard_form" action="http://fe.it-academy.by/TestForm.php" method="post|get">
                 <fieldset>
                     <legend>Строка поиска</legend>
                     <input type="text" name="searchbox" maxlength="10">
@@ -24,7 +24,7 @@
         </td>
         <td>
             Простая форма поиска с вариантами:
-            <form name="standart_form" action="http://fe.it-academy.by/TestForm.php" method="post|get">
+            <form name="standard_form" action="http://fe.it-academy.by/TestForm.php" method="post|get">
                 <fieldset>
                     <legend>Строка поиска</legend>
                     <label for="search">*</label>
@@ -43,7 +43,7 @@
     <tr>
         <td>
             Простая форма авторизации:
-            <form name="standart_form" action="http://fe.it-academy.by/TestForm.php" method="post|get">
+            <form name="standard_form" action="http://fe.it-academy.by/TestForm.php" method="post|get">
                 <fieldset>
                     <legend>Строка поиска</legend>
                     <input id="login" type="text" name="login" required>
@@ -60,7 +60,7 @@
         </td>
         <td>
             Опрос(голосование):
-            <form name="standart_form" action="http://fe.it-academy.by/TestForm.php" method="post|get">
+            <form name="standard_form" action="http://fe.it-academy.by/TestForm.php" method="post|get">
                 <fieldset>
                     <legend>
                         Как вам?
@@ -71,7 +71,8 @@
                         <input type="radio" name="radio_group" value="value_3">хорошо <br>
                         <input type="radio" name="radio_group" value="value_4">супер <br>
                     </label>
-                    <input type="date" name="date_voite" value="013.12.31" hidden> <br>
+                    <input type="hidden" name="date_voite1" value="2013.12.31"> <br>
+                    <input type="date" name="date_voite" value="2013.12.31" hidden> <br>
                     <input type="submit" value="Отправить"><br>
                     <em>Есть скрытое поле
                         name=date_voite, value="2013.12.31"</em>
@@ -82,7 +83,7 @@
     <tr>
         <td>
             Отзыв:
-            <form name="standart_form" action="http://fe.it-academy.by/TestForm.php" method="get">
+            <form name="standard_form" action="http://fe.it-academy.by/TestForm.php" method="get">
                 <fieldset>
                     <legend>Оставьте Ваш отзыв</legend>
                     <input id="name" type="text">
@@ -99,7 +100,7 @@
         </td>
         <td>
             Выпадающий и мульти списки:
-            <form name="standart_form" action="http://fe.it-academy.by/TestForm.php" method="post|get">
+            <form name="standard_form" action="http://fe.it-academy.by/TestForm.php" method="post|get">
                 <fieldset>
                     <legend>Города РБ</legend>
                     <select name="select1">
@@ -110,7 +111,7 @@
                         <option value="city5">Рязань</option>
                         <option value="city6">Магадан</option>
                     </select>
-                    <select name="select2">
+                    <select name="select2" size="8">
                         <optgroup label="Города РБ">
                             <option value="city7">Брест</option>
                             <option value="city8">Минск</option>
@@ -130,7 +131,7 @@
     <tr>
         <td>
             Загрузка файла на сервер:
-            <form name="standart_form6" action="http://fe.it-academy.by/TestForm.php" method="POST"
+            <form name="standard_form6" action="http://fe.it-academy.by/TestForm.php" method="POST"
                   enctype="multipart/form-data">
                 <fieldset>
                     <legend>Upload</legend>

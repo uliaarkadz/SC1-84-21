@@ -5,13 +5,15 @@
     <title>Registration Form</title>
 </head>
 <body>
-<form name="standart_form6" action="http://fe.it-academy.by/TestForm.php" method="POST">
+<!--Done in English, y menya net Russian keyboard-->
+<form name="standard_form6" action="http://fe.it-academy.by/TestForm.php" method="POST">
     <fieldset>
         <legend>Personal Information</legend>
         <input type="text" name="lastname" id="lname" placeholder="Lastname" required autofocus maxlength="25"
                pattern="^[A-Za-z+$"> <br>
         <input type="text" name="firstname" id="fname" placeholder="Firstname" maxlength="20" pattern="^[A-Za-z+$"> <br>
-        <input type="text" name="middlename" id="mname" placeholder="Middle Name" maxlength="24" pattern="^[A-Za-z]+$"><br>
+        <input type="text" name="middlename" id="mname" placeholder="Middle Name" maxlength="24"
+               pattern="^[A-Za-z]+$"><br>
         <fieldset>
             <legend>Passport Info</legend>
             <input type="text" required pattern="^[A-Z]{2}" size="3" maxlength="2">
@@ -45,7 +47,7 @@
         <textarea name="address" id="address" cols="30" rows="5"></textarea>
     </fieldset>
     <fieldset>
-        <legend>Hobies</legend>
+        <legend>Hobbies</legend>
         <label>
             <input type="radio" name="hobby" value="value_1">Fishing
         </label><br>

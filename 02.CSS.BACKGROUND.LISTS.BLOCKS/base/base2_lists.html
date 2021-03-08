@@ -4,25 +4,38 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        div{
-            background: black;
-            color: green;
-            width: 400px;
-            overflow: auto;
-            line-height: 1em;
-            height: 4em;
-            /*white-space: pre-wrap;*/
-        }
+        @import "base2styles.css";
     </style>
 </head>
 <body>
-<div>
+<div id="code_block">
     <code>
         #!/usr/bin/env python
         print 'Hello. I am a python program.'
         name = raw_input("What is your name?")
         print "Hello there, " + name + "!"
     </code>
+</div>
+<div id="list">
+<ol>
+    <li class="level1"> Block with code
+        <ol class="level2">
+            <li>Background black</li>
+            <li>Text color green</li>
+            <li>Width: 400px</li>
+            <li>Max container height: 4 lines</li>
+            <li>Overflow: auto</li>
+
+        </ol>
+    </li>
+    <li class="level1">List
+        <ol class="level2">
+            <li>Width: 350px</li>
+            <li>List type: roman</li>
+            <li>Type of inline list:low cap romans </li>
+        </ol>
+    </li>
+</ol>
 </div>
 </body>
 </html>

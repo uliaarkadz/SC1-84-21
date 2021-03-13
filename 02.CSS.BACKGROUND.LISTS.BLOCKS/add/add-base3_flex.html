@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .wrap {
+            width: 45em;
+            background-color: dimgray;
+            margin: 0px;
+            display: flex;
+        }
+        #navigation {
+            background-color: #eeeeee;
+            width: 15em;
+           flex-direction: column;
+        }
+        .article {
+            background-color: darkgray;
+            white-space: pre-wrap;
+            margin-bottom: 0.2em;
+            flex-direction: row;
+            width: 30em;
+        }
+        img {
+            float: right;
+        }
+        .clear {
+            clear: both;
+        }
+        #footer {
+            background-color: #eeeeee;
+            width: 45em;
+            clear: both;
+            margin-bottom: 0.2em;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div id="navigation">
+        <b>Block navigation</b>
+        <ul>
+            <li>Width 15em</li>
+            <li>Should have background color</li>
+            <li>Align - left</li>
+            <li>To overlap with second articleTo overlap with secon articleTo overlap with secon articleTo overlap with
+                second
+            </li>
+        </ul>
+    </div>
+    <div class="article">
+        <b>Article 1</b>
+        Size:
+        Takes all width
+        Should have background color
+        margin-bottom = 0.2 em
+    </div>
+    <div class="join"></div>
+    <div class="article" id="a2">
+        <b>Article 2</b>
+        Size:
+        Takes all width
+        Should have background color
+        margin-bottom = 0.2 em
+        <img src="icon_mail.png" alt="mail" style="width:100px">
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div id="footer">
+    Size: Takes all width Should have background color margin-bottom = 0.2 em
+</div>
+</body>
+</html>

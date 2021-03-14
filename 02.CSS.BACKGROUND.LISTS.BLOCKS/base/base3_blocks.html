@@ -4,33 +4,36 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        .wrap {
+            width: 100%;
+            background-color: dimgray;
+            /*margin: 0px;*/
+        }
         #navigation {
             background-color: #eeeeee;
             width: 15em;
             float: left;
-        }
-        .wrap {
-            width: 45em;
-            background-color: dimgray;
-            margin: 0px;
         }
         .article {
             background-color: darkgray;
             white-space: pre-wrap;
             margin-bottom: 0.2em;
             float: left;
-            width: 30em;
+            width: calc(100% - 15em);
+        }
+        .image {
+            float: right;
         }
         img {
-            float: right;
+            clear: right;
         }
         .clear {
             clear: both;
         }
+
         #footer {
             background-color: #eeeeee;
-            width: 45em;
-            clear: both;
+            width: 100%;
             margin-bottom: 0.2em;
         }
 
@@ -50,26 +53,31 @@
         </ul>
     </div>
     <div class="article">
-        <b>Article 1</b>
-        Size:
-        Takes all width
-        Should have background color
-        margin-bottom = 0.2 em
+            <b>Article 1</b>
+            Size:
+            Takes all width
+            Should have background color
+            margin-bottom = 0.2 em
     </div>
-    <div class="join"></div>
-    <div class="article" id="a2">
-        <b>Article 2</b>
-        Size:
-        Takes all width
-        Should have background color
-        margin-bottom = 0.2 em
-        <img src="icon_mail.png" alt="mail" style="width:100px">
+
+    <div class="article">
+            <b>Article 2</b>
+            Size:
+            Takes all width
+            Should have background color
+            margin-bottom = 0.2 em. Image is inserted with help of img tag ,
+            float right inside of Article 2
+        <div class="image">
+            <img src="icon_mail.png" alt="mail" style="width:100px">
+        </div>
     </div>
+
     <div class="clear"></div>
+    <div class="join"></div>
 </div>
 
 <div id="footer">
-    Size: Takes all width Should have background color margin-bottom = 0.2 em
+    Bottom block. Footer. Takes all available length. Hight is defined by content
 </div>
 </body>
 </html>

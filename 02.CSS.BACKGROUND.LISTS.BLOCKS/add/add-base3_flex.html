@@ -4,43 +4,56 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-
-        .wrap {
-            width: 45em;
-            background-color: dimgray;
-            margin: 0px;
+        body{
+            background-color: bisque;
+        }
+        .container-1 {
             display: flex;
         }
-        #navigation {
-            background-color: #eeeeee;
-            width: 15em;
-           flex-direction: column;
-        }
-        .article {
-            background-color: darkgray;
-            white-space: pre-wrap;
-            margin-bottom: 0.2em;
-            flex-direction: row;
-            width: 30em;
-        }
-        img {
-            float: right;
-        }
-        .clear {
-            clear: both;
-        }
-        #footer {
-            background-color: #eeeeee;
-            width: 45em;
-            clear: both;
-            margin-bottom: 0.2em;
+
+        .container-1 {
+            background-color: dimgray;
+
         }
 
+        .box1 {
+            background-color: #eeeeee;
+            width: 15em;
+            height: 40%;
+            flex-direction: column;
+
+        }
+        .box{
+           flex-basis: 100%;
+
+
+        }
+
+        .box-1, .box-2 {
+            background-color: darkgray;
+         white-space: pre-wrap;
+            flex-direction: row;
+            margin-bottom: 0.2em;
+            text-align: justify-all;
+
+        }
+
+        img {
+            float: right;
+            width:90px
+        }
+        .image{
+            clear: right;
+        }
+
+        #footer {
+            background-color: #eeeeee;
+        }
     </style>
 </head>
 <body>
-<div class="wrap">
-    <div id="navigation">
+<div class="container-1">
+    <div class="box1">
         <b>Block navigation</b>
         <ul>
             <li>Width 15em</li>
@@ -51,27 +64,31 @@
             </li>
         </ul>
     </div>
-    <div class="article">
-        <b>Article 1</b>
-        Size:
-        Takes all width
-        Should have background color
-        margin-bottom = 0.2 em
-    </div>
-    <div class="join"></div>
-    <div class="article" id="a2">
-        <b>Article 2</b>
-        Size:
-        Takes all width
-        Should have background color
-        margin-bottom = 0.2 em
-        <img src="icon_mail.png" alt="mail" style="width:100px">
-    </div>
-    <div class="clear"></div>
-</div>
 
+    <div class="box">
+        <div class="box-1">
+            <b>Article 1</b>
+            Size:
+            Takes all width
+            Should have background color
+            margin-bottom = 0.2 em
+        </div>
+        <div class="box-2">
+            <b>Article 2</b>
+            Size:
+            Takes all width
+            Should have background color
+            margin-bottom = 0.2 em. Image is inserted with help of img tag ,
+            float right inside of Article 2
+            <div class="image">
+                <img src="../base/icon_mail.png" alt="mail">
+            </div>
+
+        </div>
+    </div>
+</div>
 <div id="footer">
-    Size: Takes all width Should have background color margin-bottom = 0.2 em
+    Bottom block. Footer. Takes all available length. Hight is defined by content
 </div>
 </body>
 </html>

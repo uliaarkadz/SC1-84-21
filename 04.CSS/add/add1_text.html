@@ -9,37 +9,30 @@
                 padding: 10px;
                 border-radius:0 1em/2em ;
             }
-            A.external{
-                background: url(../add/extref.png) no-repeat 0 5px;
-                padding-left: 15px;
+            a.external::before{
+                content: url("extref.png");
             }
 
-            ul{
-                list-style-image: url("../add/logo-list.jpg");
+            li::before{
+                content: url("logo-list.jpg")
             }
-            a.type[href$=doc]{
-                background: url(../add/logo-doc.jpg) no-repeat 140px 3px;
-                padding-right: 30px;
+            a.type[href$=doc]::after {
+            content: url(logo-doc.jpg)
             }
-            a.type[href$=pdf]{
-                background: url(../add/logo-pdf.png) no-repeat 110px 3px;
-                padding-right: 30px;
+            a.type[href$=pdf]::after {
+                content: url(logo-pdf.png)
             }
-            a.type[href$=zip]{
-                background: url(../add/logo-zip.gif) no-repeat 55px 3px;
-                padding-right: 30px;
+            a.type[href$=zip]::after {
+                content: url(logo-zip.gif)
             }
-            li>a:hover[href$=doc] {
-                background: url(../add/logo-doc.jpg) no-repeat 140px 3px;
-                padding-right: 30px;
+            li>a:hover[href$=doc]::after {
+                content: url(logo-doc.jpg)
             }
-            li>a:hover[href$=pdf]{
-                background: url(../add/logo-pdf.png) no-repeat 110px 3px;
-                padding-right: 30px;
+            li>a:hover[href$=pdf]::after {
+                content: url(logo-pdf.png)
             }
-            li>a:hover[href$=zip]{
-                background: url(../add/logo-zip.gif) no-repeat 55px 3px;
-                padding-right: 30px;
+            li>a:hover[href$=zip]::after {
+                content: url(logo-zip.gif)
             }
 
 

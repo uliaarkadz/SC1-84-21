@@ -12,10 +12,10 @@
             a.external::before{
                 content: url("extref.png");
             }
-
-            li::before{
-                content: url("logo-list.jpg")
+            li{
+                list-style-image: url("logo-list.jpg");
             }
+
             a.type[href$=doc]::after {
             content: url(logo-doc.jpg)
             }
@@ -25,6 +25,7 @@
             a.type[href$=zip]::after {
                 content: url(logo-zip.gif)
             }
+
             li>a:hover[href$=doc]::after {
                 content: url(logo-doc.jpg)
             }
@@ -35,8 +36,6 @@
                 content: url(logo-zip.gif)
             }
 
-
-			
 		</style>	
         </HEAD> 
         <BODY>

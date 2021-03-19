@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        div {
+
+        #border_image1 {
+            border-style: solid;
+            border-width: 20px;
+            border-image-slice: 100;
+            border-image-source: url("ramka.png");
+            border-image-repeat: stretch;
+            border-image-width: 400px;
+
+
+        }
+        #border_image2 {
+            background: url(l-t.png) no-repeat top left,
+            url(r-t.png) no-repeat top right,
+            url(l-b.png) no-repeat bottom left,
+            url(r-b.png) no-repeat bottom right,
+            url(l.png) repeat-y left,
+            url(r.png) repeat-y right,
+            url(t.png) repeat-x top,
+            url(b.png) repeat-x bottom;
             padding: 3em;
-            /*background-color: red;*/
-            background-image:  url(l-b.png), url(l-t.png), url(r-b.png), url(r-t.png),url(l.png), url(r.png), url(b.png), url(t.png);
+        }
+
+        #border_image3 {
+            padding: 3em;
+            background-image: url(l-b.png), url(l-t.png), url(r-b.png), url(r-t.png), url(l.png), url(r.png), url(b.png), url(t.png);
             background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat-y, repeat-y, repeat-x, repeat-x;
             background-position: bottom left, top left, bottom right, top right, left, right, bottom, top;
 
@@ -15,11 +37,42 @@
     </style>
 </head>
 <body>
-
-…
-<div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto aspernatur beatae, dignissimos ea est exercitationem facilis incidunt laboriosam nihil nostrum officia omnis perspiciatis quia quis quos reiciendis similique vel?</p>
+<div id="border_image1">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto aspernatur beatae, dignissimos ea est
+        exercitationem facilis incidunt laboriosam nihil nostrum officia omnis perspiciatis quia quis quos reiciendis
+        similique vel?</p>
 </div>
-
+<div id="border_image2">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto aspernatur beatae, dignissimos ea est
+        exercitationem facilis incidunt laboriosam nihil nostrum officia omnis perspiciatis quia quis quos reiciendis
+        similique vel?</p>
+</div>
+<div id="border_image3">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto aspernatur beatae, dignissimos ea est
+        exercitationem facilis incidunt laboriosam nihil nostrum officia omnis perspiciatis quia quis quos reiciendis
+        similique vel?</p>
+</div>
+<div style="background: url(l.png) repeat-y left">
+    <div style="background: url(r.png) repeat-y right">
+        <div style="background: url(t.png) repeat-x top">
+            <div style="background: url(b.png) repeat-x bottom">
+                <div style="background: url(l-t.png) no-repeat top left">
+                    <div style="background: url(r-t.png) no-repeat top right">
+                        <div style="background:   url(l-b.png) no-repeat bottom left">
+                            <div style="background: url(r-b.png) no-repeat bottom right">
+                                <div style="padding: 3em">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto
+                                        aspernatur beatae, dignissimos ea est exercitationem facilis incidunt laboriosam
+                                        nihil nostrum officia omnis perspiciatis quia quis quos reiciendis similique
+                                        vel?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

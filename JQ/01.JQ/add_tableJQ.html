@@ -6,79 +6,24 @@
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     <TITLE>Пример страницы</TITLE>
-    <style>
-        tr:nth-child(2n) {
-            background-color: lightslategrey;
-        }
-
-        tr:nth-child(0n+1){
-            background-color: black;
-            color: #eeeeee;
-        }
-
-        table{
-            border-collapse: collapse;
-        }
-
-        td,th,tr{
-            border: 1px dotted #999;
-        }
-
-        th:not(:nth-child(1)){
-            text-align: right;
-        }
-        /*th:nth-child(n+1){*/
-        /*    text-align: right;*/
-        /*}*/
-        tr:hover:not(:nth-child(1)){
-            background: #f3bd48;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        /*caption {*/
-        /*    caption-side: bottom;*/
-        /*}*/
-
-    </style>
 </HEAD>
 <BODY>
-<div class="container">
-    <div class="row">
-        <div class="col-1">
-            ФИО
-        </div>
-        <div class="col-1">
-            пол
-        </div>
-        <div class="col-1">
-            должность
-        </div>
-        <div class="col-1">
-            дата рож.
-        </div>
-        <div class="col-1">
-            Данные 01
-        </div>
-        <div class="col-1">
-            Данные 02
-        </div>
-    </div>
 
-</div>
-
-<table>
+<table class="table table-bordered table-striped">
     <caption>данные о сотрудниках</caption>
+    <thead class="head">
     <tr>
-        <th>ФИО</th>
-        <th>пол</th>
-        <th>должность</th>
-        <th>дата рож.</th>
-        <th>Данные 01</th>
-        <th>Данные 02</th>
+        <th scope="col">ФИО</th>
+        <th scope="col">пол</th>
+        <th scope="col">должность</th>
+        <th scope="col">дата рож.</th>
+        <th scope="col">Данные 01</th>
+        <th scope="col">Данные 02</th>
     </tr>
+
+    <tbody>
     <tr>
-        <th>Иванов Иван Иванович</th>
+        <th scope="row">Иванов Иван Иванович</th>
         <td>М</td>
         <td>начальник</td>
         <td>01.01.1960</td>
@@ -86,7 +31,7 @@
         <td>3453</td>
     </tr>
     <tr>
-        <th>Петрова Илонна Петровна</th>
+        <th scope="row">Петрова Илонна Петровна</th>
         <td>Ж</td>
         <td>секретарь</td>
         <td>01.01.1989</td>
@@ -94,7 +39,7 @@
         <td>46523</td>
     </tr>
     <tr>
-        <th>Сидоров Илья Игоревич</th>
+        <th scope="row">Сидоров Илья Игоревич</th>
         <td>М</td>
         <td>бухгалтер</td>
         <td>01.01.1979</td>
@@ -102,7 +47,7 @@
         <td>987979</td>
     </tr>
     <tr>
-        <th>Пупин Фёдор Фёдорович</th>
+        <th scope="row">Пупин Фёдор Фёдорович</th>
         <td>М</td>
         <td>водитель</td>
         <td>01.01.1963</td>
@@ -110,24 +55,64 @@
         <td>9232379</td>
     </tr>
     <tr>
-        <th>Крупин Сергей Иванович</th>
+        <th scope="row">Крупин Сергей Иванович</th>
         <td>М</td>
         <td>водитель 2</td>
         <td>01.01.1983</td>
         <td>3234534</td>
         <td>923123379</td>
     </tr>
+    </tbody>
 </table>
+
+<input class="button" type="button" value="No Hidden Rows">
 <script
         src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
         crossorigin="anonymous"></script>
 <script>
-    $(document).ready.(function (){
-        $('caption').css({captionSide: bottom})
+    $('thead').css({
+        backgroundColor: 'black',
+        color: 'white',
     })
-</script>
+    $('th').css({
+        border: 'dotted'
+    })
+    $('td').css({
+        border: 'dotted'
+    })
+    $('tbody>tr:nth-child(odd)').css({
+        backgroundColor: 'grey',
+    })
+    $('thead').css({
+        textAlign: 'center'
+    })
+    $('tbody>tr').hover(function () {
+            $(this).css("background-color", "yellow");
+        },
+        function () {
+            $('tbody>tr:nth-child(odd)').css("background-color", "grey"),
+                $('tbody>tr:nth-child(even)').css("background-color", "white")
+        }
+    )
+    $('tbody>tr').on('click', function () {
+            $(this).hide()
+        }
+    )
+    $('tbody>tr').on('click', function () {
+            var visElements = $('tr:hidden').length;
+        var hiidenElements = $('tr:visible').length;
+            if (visElements) {
+                $('.button').attr('value', "Show Rows")
+            }
+        }
+    )
+    $('.button').on('click', function () {
+        $('tr').show(),
+        $(this).attr('value', "No Hidden Rows")
+    })
 
+</script>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
